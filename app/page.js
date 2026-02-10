@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       <div className={"p-5 font-mono"}>
-        <Card>
+        <Card className={"p-4 border border-gray-200 bg-slate-200 "}>
           <CardHeader>
             <CardTitle className={"text-2xl "}>Home Page</CardTitle>
             <CardDescription>Welcome to the Intern Portal</CardDescription>

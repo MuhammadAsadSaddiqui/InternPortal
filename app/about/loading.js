@@ -1,9 +1,11 @@
+import {Card} from "@/components/ui/card";
+
 export default function Loading() {
   return (
     <>
-      <div className={""}>
-        <p className={"text-2xl font-mono bg-slate-400"}>Loading...</p>;
-      </div>
+        <Card className={"p-4 border border-gray-200 bg-slate-400 m-5"}>
+            Loading....
+        </Card>
     </>
   );
 }

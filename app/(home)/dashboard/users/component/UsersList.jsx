@@ -1,8 +1,9 @@
 'use client'
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
 import {useEffect, useState} from "react";
+import Link from "next/link";
 
-export default async function UsersPage() {
+export default function UsersList() {
     const [users, setUsers] = useState([])
     useEffect(() => {
         const fetchUsers = async () => {
@@ -19,13 +20,11 @@ export default async function UsersPage() {
                 {users.map((user, index) => (
                     <Card >
                         <CardHeader>
-                            <CardTitle>{user.name}</CardTitle>
+                            <Link href={`/dashboard/users/${user.id}`}>Name : {user.name}</Link>
                         </CardHeader>
                         <CardContent>
                             <p>Username: {user.username}</p>
-                            <p>Email: {user.email}</p>
-                            <p>Phone: {user.phone}</p>
-                            <p>City: {user.address.city}</p>
+
                         </CardContent>
                     </Card>
                 ))}

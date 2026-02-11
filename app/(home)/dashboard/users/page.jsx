@@ -1,15 +1,15 @@
-import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
+import UsersList from '@/app/(home)/dashboard/users/component/UsersList';
+import { Suspense } from "react";
+import LoadingSpinner from "@/components/shared/LoadingSpinner";
+import UserDetails from "@/app/(home)/dashboard/users/[id]/page";
 
 export default function UsersPage() {
-  return (
-    <>
-        <Card className={"p-4 border border-gray-200 bg-slate-200 m-5"}>
-            <CardHeader>
-                <CardTitle className={'text-2xl'}>Users</CardTitle>
-            </CardHeader>
-            <CardContent>Users Page Implementation Soon</CardContent>
-        </Card>
-
-    </>
-  );
+    return (
+        <>
+            <Suspense fallback={<LoadingSpinner />}>
+            <UsersList/>
+            </Suspense>
+            <UserDetails/>
+        </>
+    )
 }

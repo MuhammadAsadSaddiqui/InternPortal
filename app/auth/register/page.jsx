@@ -1,6 +1,7 @@
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
 
-export default function RegisterPage() {
+export default async function RegisterPage({searchParams}) {
+    console.log(await searchParams);
   return (
     <>
         <Card className={"p-4 border border-gray-200 bg-slate-200 m-5"}>
